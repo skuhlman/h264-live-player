@@ -157,3 +157,7 @@ var WSAvcPlayer = new Class({
 
 module.exports = WSAvcPlayer;
 module.exports.debug = debug;
+module.exports.Decoder = Avc;
+module.exports.YUVCanvas = YUVCanvas;
+module.exports.YUVWebGLCanvas = YUVWebGLCanvas;
+module.exports.Size = Size;
