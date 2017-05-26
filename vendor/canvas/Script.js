@@ -24,7 +24,7 @@ Script.createFromElementId = function(id) {
     currentChild = currentChild.nextSibling;
   }
   
-  var res = new Scriptor();
+  var res = new Script();
   res.type = script.type;
   res.source = source;
   return res;

@@ -8,9 +8,13 @@
  */
 
 var Script = require('./Script');
+var Texture = require('./Texture');
+var Program = require('./Program');
+var Shader = require('./Shader');
 var error  = require('../utils/error');
 var makePerspective  = require('../utils/glUtils').makePerspective;
 var Matrix = require('sylvester.js').Matrix;
+var $V = require('sylvester.js').Vector.create;
 var Class  = require('uclass');
   
 
@@ -194,7 +198,7 @@ var WebGLCanvas = new Class({
     if (err != this.gl.NO_ERROR) {
       var name = this.glNames[err];
       name = (name !== undefined) ? name + "(" + err + ")":
-          ("Unknown WebGL ENUM (0x" + value.toString(16) + ")");
+          ("Unknown WebGL ENUM (0x" + err.toString(16) + ")");
       if (operation) {
         console.log("WebGL Error: %s, %s", operation, name);
       } else {
