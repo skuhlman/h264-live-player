@@ -45,11 +45,8 @@ var WebGLCanvas = new Class({
 
     this.canvas = canvas;
     this.size = size;
-
-    // Scale to canvas width instead of restricting to canvas width
-    // this.canvas.width = size.w;
-    // this.canvas.height = size.h;
-
+    this.canvas.width = size.w;
+    this.canvas.height = size.h;
     
     this.onInitWebGL();
     this.onInitShaders();
