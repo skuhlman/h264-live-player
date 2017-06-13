@@ -175,7 +175,9 @@ var WebGLCanvas = new Class({
     // Set the texture coordinates attribute for the vertices.
     
     gl.bindBuffer(gl.ARRAY_BUFFER, this.quadVTCBuffer);
-    gl.vertexAttribPointer(this.textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);  
+    gl.vertexAttribPointer(this.textureCoordAttribute, 2, gl.FLOAT, false, 0, 0);
+
+    gl.viewport(0, 0, gl.canvas.width, gl.canvas.height);
     
     this.onInitSceneTextures();
     
